@@ -47,7 +47,8 @@ class MainServer(asyncio.Protocol):
     def connection_made(self, transport):
         peername = transport.get_extra_info('peername')
         print(f'Connection address: {peername[0]} {peername[1]}')
-        self.transport = transport  # Store the transport object as an instance variable
+        # Store the transport object as an instance variable
+        self.transport = transport  
         outgoing.append(transport)
         for id in range(1, 11):
             try:

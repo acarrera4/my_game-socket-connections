@@ -38,7 +38,7 @@ game_folder = os.path.dirname(__file__)
 img_folder = os.path.join(game_folder, "images")
 
 sound_folder = os.path.join(game_folder, "sounds")
-damage_se = pg.mixer.Sound("punch_SE.mp3")
+#damage_se = pg.mixer.Sound("punch_SE.mp3")
 
 
 # create game class in order to pass properties to the sprites file
@@ -196,13 +196,13 @@ class Game:
             # print("PLayer2 Health:", self.player_2.health)
 
         # plays sound when players collide with particles 
-        p1hits = pg.sprite.spritecollide(self.player, self.enemies, False)
-        if p1hits:
-            damage_se.play()
+        #p1hits = pg.sprite.spritecollide(self.player, self.enemies, False)
+        #if p1hits:
+            #damage_se.play()
         
-        p2hits = pg.sprite.spritecollide(self.player_2, self.enemies, False)
-        if p2hits:
-            damage_se.play()
+        #p2hits = pg.sprite.spritecollide(self.player_2, self.enemies, False)
+        #if p2hits:
+            #damage_se.play()
 
         
         # sets up output if player collides with a specific platform
